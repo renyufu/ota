@@ -1,0 +1,1 @@
+docker run --rm -it -v `pwd`:/proj --privileged -v  /dev/cu.SLAB_USBtoUART:/dev/ttyS0 --entrypoint bash renyufu/esp32-idf

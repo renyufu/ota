@@ -1,0 +1,1 @@
+python /Users/renyufu/esp/esptool/esptool.py --chip esp32 --port /dev/cu.wchusbserial1410 --baud 115200 erase_flash
