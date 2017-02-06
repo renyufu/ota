@@ -298,6 +298,7 @@ void main_task(void *pvParameter)
 
     ESP_LOGI(TAG, "Total Write binary data length : %d", binary_file_length);
 
+
     if (esp_ota_end(out_handle) != ESP_OK) {
         ESP_LOGE(TAG, "esp_ota_end failed!");
         task_fatal_error();
