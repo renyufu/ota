@@ -1,4 +1,4 @@
-/* OTA example 123r56789
+/* OTA example 123r56789A
 
    This example code is in the Public Domain (or CC0 licensed, at your option.)
 
