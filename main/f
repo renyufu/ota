@@ -1,0 +1,7 @@
+pwd=`pwd`
+proj=ota
+port=/dev/cu.wchusbserial1410
+curl -s -k -H 'X-Auth-Token: hahatest' https://dmbb.dynamic-dns.net:8080/build/bootloader/bootloader.bin -o bootloader.bin
+curl -s -k -H 'X-Auth-Token: hahatest' https://dmbb.dynamic-dns.net:8080/build/partitions_two_ota.bin -o partitions_two_ota.bin
+curl -s -k -H 'X-Auth-Token: hahatest' https://dmbb.dynamic-dns.net:8080/build/$proj.bin -o $proj.bin
+esptool.py --chip esp32 --port $port --baud 115200 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 40m --flash_size detect  0x1000 $pwd/bootloader.bin 0x10000 $pwd/$proj.bin 0x8000 $pwd/partitions_two_ota.bin
