@@ -1,2 +1,3 @@
-port=/dev/cu.wchusbserial1410
+#port=/dev/cu.wchusbserial1410
+port=/dev/cu.SLAB_USBtoUART
 esptool.py --chip esp32 --port $port --baud 115200 erase_flash
